@@ -13,7 +13,15 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      inventory: []
+      inventory: [
+
+        // dummy data
+        // {
+        //   img: '',
+        //   name: '',
+        //   price: ''
+        // }
+      ]
 
     }
     this.AddProducts = this.AddProducts.bind(this)

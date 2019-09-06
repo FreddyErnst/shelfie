@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require("express");
 const app = express();
-const port = 6000;
+const port = 5050;
 const controller  = require("./controller")
 const massive = require("massive")
 
@@ -15,8 +15,10 @@ then(dbInstance => {
 
 app.use(express.json())
 
-app.post("api/products", controller.addProduct)
-app.get("api/products", controller.getProducts)
+app.post("/api/inventory", controller.addProduct)
+app.get("/api/inventory", controller.getProducts)
+app.delete("/api/inventory/:id", controller.deleteProduct)
+
 
 app.listen(port, () => {
     console.log(`Listening on ${port}`)

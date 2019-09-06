@@ -25,7 +25,7 @@ class Form extends Component {
         return (
             <div className="Form">
                 <form onSubmit={() => {
-                    Axios.post("api/products", {
+                    Axios.post("/api/inventory", {
                         img: this.state.img,
                         name: this.state.name,
                         price: this.state.price

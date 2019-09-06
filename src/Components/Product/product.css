@@ -4,8 +4,8 @@
 }
 
 .productbox {
-    height: 20vh;
-    width: 20vw;
+    height: 25vh;
+    width: 25vw;
     background-color: red;
     display: flex;
     flex-direction: column;

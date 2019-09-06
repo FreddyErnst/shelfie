@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header/Header';
 import Dashboard from './Components/Dashboard/Dashboard';
@@ -13,42 +12,42 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      Inventory: [
-        {
-        
-        }
+      inventory: []
 
-      ]
     }
+    this.AddProducts = this.AddProducts.bind(this)
   }
 
   componentDidMount() {
     Axios
-    .get("/api/products") 
+    .get("/api/inventory") 
     .then (response => {
-      this.setState({Inventory: response.data})
+    this.setState({inventory: response.data})
     })
-    .catch(() => console.log('error'))
-  }
+    .catch(() => console.log("error"))
+}
 
   AddProducts() {
     Axios
-    .post("/api/products")
+    .post("/api/inventory")
     .then (response => {
       this.setState({
-        Inventory: response.data
+        inventory: response.data
       })
     })
+    .catch ((err) => console.log(err))
   }
 
   
 
   render() {
+    const {inventory} = this.state
   return (
+
     <div className="App">
     <Header/>
-    <Dashboard inventory = {this.state.Inventory}/>
-    <Form inventory = {this.state.Inventory} AddProducts={this.AddProducts}/>
+    <Dashboard inventory = {inventory}/>
+    <Form inventory = {inventory} AddProducts={this.AddProducts}/>
 
     </div>
   );

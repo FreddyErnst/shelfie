@@ -1,0 +1,28 @@
+.Form {
+    height: 40vh;
+    width: 40vw;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    
+    
+
+}
+
+.Form-Input {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    justify-content: flex-end;
+    justify-content: center;
+}
+
+.Img {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    align-self: center;
+
+}

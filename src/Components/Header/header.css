@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+}
+
+.header {
+    height: 10vh;
+    width: 100vw;
+    background-color: red;
+    display: flex;
+    position: fixed;
+    top: 0px;
+}

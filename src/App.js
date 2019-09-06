@@ -7,7 +7,7 @@ import './Components/Header/header.css'
 import './Components/Form/form.css'
 import './Components/Product/product.css'
 import Axios from 'axios';
-import routes from './routes'
+// import routes from './routes'
 
 class App extends React.Component {
   constructor() {

@@ -20,7 +20,7 @@ class Form extends Component {
         })
     }
 
-
+// Tried to pass down a axios post method as a prop in the onSubmit , didnt seem to be working
     render() {
         return (
             <div className="Form">

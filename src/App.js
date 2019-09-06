@@ -7,6 +7,7 @@ import './Components/Header/header.css'
 import './Components/Form/form.css'
 import './Components/Product/product.css'
 import Axios from 'axios';
+import routes from './routes'
 
 class App extends React.Component {
   constructor() {
@@ -45,7 +46,8 @@ class App extends React.Component {
   return (
 
     <div className="App">
-    <Header/>
+   {/* {routes} */}
+   <Header/>
     <Dashboard inventory = {inventory}/>
     <Form inventory = {inventory} AddProducts={this.AddProducts}/>
 
